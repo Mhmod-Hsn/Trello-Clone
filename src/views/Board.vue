@@ -12,10 +12,10 @@
 
       <div class="column flex">
         <input
-          type="text"
-          class="p-2 mr-2 flex-grow"
-          placeholder="+ New Column Name"
-          @keyup.enter="createColumn($event)">
+	        @keyup.enter="createColumn($event)"
+	        class="p-2 mr-2 flex-grow bg-transparent"
+	        placeholder="+ New Column Name"
+	        type="text">
 
       </div>
     </div>
@@ -32,10 +32,10 @@
 </template>
 
 <script>
-import { mapState } from 'vuex'
-import BoardColumn from '@/components/BoardColumn'
+  import {mapState} from 'vuex'
+  import BoardColumn from '@/components/BoardColumn'
 
-export default {
+  export default {
   components:{
     BoardColumn
   },
@@ -47,7 +47,7 @@ export default {
   },
   methods: {
     createColumn(e){
-      this.$store.commit('CREATE_COLUMN',{name: e.target.value})
+      this.$store.commit('CREATE_COLUMN', {name: e.target.value});
       e.target.value=''
     },
     close () {
