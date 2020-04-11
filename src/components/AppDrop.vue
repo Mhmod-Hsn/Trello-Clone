@@ -1,9 +1,8 @@
 <template>
 	<div
-		@drop.self="onDrop"
 		@dragenter.prevent
 		@dragover.prevent
-
+		@drop.stop="onDrop"
 	>
 		<slot/>
 	</div>
@@ -11,17 +10,14 @@
 
 <script>
   export default {
-    name: "AppDrop",
-	  methods:{
-      onDrop(e){
-        const transferDate = JSON.parse(e.dataTransfer.getData('payload'))
-
-	      this.$emit('drop',transferDate)
+    methods: {
+      onDrop(e) {
+        const transferData = JSON.parse(e.dataTransfer.getData('payload'));
+        this.$emit('drop', transferData)
       }
-	  }
+    }
   }
 </script>
 
-<style scoped>
-
+<style lang="css" scoped>
 </style>
