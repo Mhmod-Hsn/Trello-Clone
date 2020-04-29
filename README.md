@@ -1,4 +1,4 @@
-> [DEMO for hte application](https://trello-8c411.web.app)
+> [DEMO for the application](https://trello-8c411.web.app)
 
 # Trello Clone
 
