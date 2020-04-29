@@ -35,7 +35,7 @@
   import {mapState} from 'vuex'
   import BoardColumn from '@/components/BoardColumn'
 
-  export default {
+export default {
   components:{
     BoardColumn
   },
