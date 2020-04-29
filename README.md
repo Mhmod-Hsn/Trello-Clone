@@ -1,6 +1,9 @@
 > [DEMO for hte application](https://trello-8c411.web.app)
 
-# watch-us-build-trello
+# Trello Clone
+
+![](preview.jpg)
+
 
 ## Project setup
 ```
